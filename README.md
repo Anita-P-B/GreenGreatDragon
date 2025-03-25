@@ -1,6 +1,6 @@
 # 🐉 Great Green Dragon
 
-A tiny, fun NLP project that explores **adjective order preferences** using a pre-trained language model.
+A tiny, fun NLP project that explores **words order preferences** using a pre-trained language model. This project does not explicitly recognize grammatical roles (like adjectives or nouns). Instead, it treats all input words equally and searches for the most likely ordering based on a language model’s internal knowledge of how natural phrases are typically constructed.
 
 Inspired by a linguistic observation from Tolkien—why does *"great green dragon"* sound more natural than *"green great dragon"*?
 
@@ -29,5 +29,32 @@ The core logic:
 
 You can install them via pip:
 
-```bash
-pip install transformers torch numpy
+bash
+'''pip install transformers torch numpy```
+
+## 🚀 Run the Script
+
+from great_green_dragon import best_permutation
+
+best_permutation("The green great dragon")
+
+## ✨ Example Output
+
+The best permutation for the sentence 'The green great dragon' is:
+  -> 'dragon The great green' (Score: -17.5732)
+
+All permutations ranked:
+ 1. dragon The great green         -> Score: -17.5732
+ 2. green The great dragon         -> Score: -18.3574
+ 3. great The green dragon         -> Score: -18.3897
+ 4. dragon The green great      -> Score: -22.1798
+ 5. great The dragon green         -> Score: -23.1762
+
+
+
+## 📚 Background
+
+This project was inspired by the idea that certain adjective orders “sound right” due to linguistic patterns learned over time. The code demonstrates how a language model—trained only to predict the next word—has implicitly learned those patterns.
+
+
+
