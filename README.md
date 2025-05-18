@@ -56,5 +56,8 @@ All permutations ranked:
 
 This project was inspired by the idea that certain adjective orders “sound right” due to linguistic patterns learned over time. The code demonstrates how a language model—trained only to predict the next word—has implicitly learned those patterns.
 
+---
+May your words find their order — and your prompts find their power.
+
 
 
